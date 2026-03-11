@@ -1,0 +1,427 @@
+[
+  {
+    "id": "mc_01",
+    "type": "multiple_choice",
+    "topic": "Datentypen",
+    "difficulty": 1,
+    "question": "Welchen Datentyp hat der Wert <code>42</code> in Python?",
+    "options": ["Float", "String", "Integer", "Boolean"],
+    "answer": 2,
+    "explanation": "<code>42</code> ist eine Ganzzahl ohne Dezimalpunkt, daher ist der Datentyp Integer."
+  },
+  {
+    "id": "mc_02",
+    "type": "multiple_choice",
+    "topic": "Datentypen",
+    "difficulty": 1,
+    "question": "Welchen Datentyp hat der Wert <code>3.14</code> in Python?",
+    "options": ["Integer", "Float", "String", "Zahl"],
+    "answer": 1,
+    "explanation": "<code>3.14</code> ist eine Fließkommazahl, daher ist der Datentyp Float."
+  },
+  {
+    "id": "mc_03",
+    "type": "multiple_choice",
+    "topic": "Datentypen",
+    "difficulty": 1,
+    "question": "Welchen Datentyp hat <code>'Hallo'</code> in Python?",
+    "options": ["Integer", "Float", "String", "Text"],
+    "answer": 2,
+    "explanation": "Texte in Anführungszeichen sind in Python vom Typ String."
+  },
+  {
+    "id": "mc_04",
+    "type": "multiple_choice",
+    "topic": "Datentypen",
+    "difficulty": 2,
+    "question": "Was ist der Datentyp des Ergebnisses von <code>10 / 2</code> in Python?",
+    "options": ["Integer, weil das Ergebnis 5 ist", "Float, weil Division immer Float ergibt", "String", "Es kommt auf die Eingabe an"],
+    "answer": 1,
+    "explanation": "In Python ergibt die Division <code>/</code> immer einen Float, auch wenn das Ergebnis ganzzahlig wäre. <code>10 / 2</code> ergibt <code>5.0</code>, nicht <code>5</code>."
+  },
+  {
+    "id": "mc_05",
+    "type": "multiple_choice",
+    "topic": "Datentypen",
+    "difficulty": 2,
+    "question": "Welche der folgenden Aussagen über Strings ist richtig?",
+    "options": [
+      "Strings können nur mit einfachen Anführungszeichen definiert werden",
+      "Strings können mit einfachen oder doppelten Anführungszeichen definiert werden",
+      "Strings können nur Buchstaben enthalten",
+      "Strings sind immer kürzer als 255 Zeichen"
+    ],
+    "answer": 1,
+    "explanation": "In Python sind sowohl einfache (<code>'</code>) als auch doppelte (<code>\"</code>) Anführungszeichen für Strings erlaubt."
+  },
+  {
+    "id": "mc_06",
+    "type": "multiple_choice",
+    "topic": "Operatoren",
+    "difficulty": 2,
+    "question": "Was gibt <code>print('2' + '3')</code> aus?",
+    "options": ["5", "23", "2 + 3", "Fehlermeldung"],
+    "answer": 1,
+    "explanation": "Bei Strings bewirkt <code>+</code> eine Verkettung, keine Addition. Die Strings <code>'2'</code> und <code>'3'</code> werden zu <code>'23'</code> zusammengefügt."
+  },
+  {
+    "id": "mc_07",
+    "type": "multiple_choice",
+    "topic": "Operatoren",
+    "difficulty": 2,
+    "question": "Was passiert bei <code>print(2 + 3)</code>?",
+    "options": ["23", "2 + 3", "5", "Fehlermeldung"],
+    "answer": 2,
+    "explanation": "Bei Integers bewirkt <code>+</code> eine mathematische Addition. Das Ergebnis ist <code>5</code>."
+  },
+  {
+    "id": "mc_08",
+    "type": "multiple_choice",
+    "topic": "Variablen",
+    "difficulty": 1,
+    "question": "Was bedeutet Initialisieren einer Variable?",
+    "options": [
+      "Eine Variable löschen",
+      "Eine Variable umbenennen",
+      "Einer Variable erstmalig einen Wert zuweisen",
+      "Den Datentyp einer Variable festlegen"
+    ],
+    "answer": 2,
+    "explanation": "Initialisieren bedeutet, eine Variable erstmalig zu erstellen und ihr einen Wert zuzuweisen."
+  },
+  {
+    "id": "mc_09",
+    "type": "multiple_choice",
+    "topic": "Variablen",
+    "difficulty": 2,
+    "question": "Welcher Variablenname entspricht der Snake-Case-Konvention?",
+    "options": ["MaximalGeschwindigkeit", "maximalgeschwindigkeit", "maximale_geschwindigkeit", "MaximaleGeschwindigkeit"],
+    "answer": 2,
+    "explanation": "Snake-Case verwendet Kleinbuchstaben und Unterstriche zur Trennung von Wörtern: <code>maximale_geschwindigkeit</code>."
+  },
+  {
+    "id": "mc_10",
+    "type": "multiple_choice",
+    "topic": "Variablen",
+    "difficulty": 2,
+    "question": "Welcher der folgenden Variablennamen ist in Python verboten?",
+    "options": ["gewicht_kg", "temperatur2", "for", "ergebnis_final"],
+    "answer": 2,
+    "explanation": "<code>for</code> ist ein Schlüsselwort in Python und darf nicht als Variablenname verwendet werden."
+  },
+  {
+    "id": "mc_11",
+    "type": "multiple_choice",
+    "topic": "Variablen",
+    "difficulty": 2,
+    "question": "Welcher Variablenname ist in Python ungültig?",
+    "options": ["_wert", "wert1", "1wert", "wert_1"],
+    "answer": 2,
+    "explanation": "Variablennamen dürfen nicht mit einer Zahl beginnen. <code>1wert</code> ist daher ungültig."
+  },
+  {
+    "id": "mc_12",
+    "type": "multiple_choice",
+    "topic": "EVA-Prinzip",
+    "difficulty": 1,
+    "question": "Wofür steht das Kürzel EVA im EVA-Prinzip?",
+    "options": [
+      "Eingabe, Verarbeitung, Ausgabe",
+      "Ergebnis, Vergleich, Ausgabe",
+      "Eingabe, Vergleich, Anzeige",
+      "Erstellung, Verwaltung, Archivierung"
+    ],
+    "answer": 0,
+    "explanation": "EVA steht für Eingabe, Verarbeitung, Ausgabe. Es beschreibt die grundlegende Reihenfolge der Datenverarbeitung."
+  },
+  {
+    "id": "mc_13",
+    "type": "multiple_choice",
+    "topic": "input()",
+    "difficulty": 1,
+    "question": "Welchen Datentyp gibt die <code>input()</code>-Funktion immer zurück?",
+    "options": ["Integer", "Float", "String", "Den Datentyp der Eingabe"],
+    "answer": 2,
+    "explanation": "Die <code>input()</code>-Funktion gibt immer einen String zurück, unabhängig davon, was der Benutzer eingegeben hat."
+  },
+  {
+    "id": "mc_14",
+    "type": "multiple_choice",
+    "topic": "input()",
+    "difficulty": 2,
+    "question": "Was muss man tun, um die Eingabe von <code>input()</code> als Zahl zu verwenden?",
+    "options": [
+      "Nichts, input() erkennt Zahlen automatisch",
+      "Die Eingabe mit <code>int()</code> oder <code>float()</code> umwandeln",
+      "Den Parameter <code>type=int</code> an input() übergeben",
+      "Die Eingabe mit <code>number()</code> umwandeln"
+    ],
+    "answer": 1,
+    "explanation": "Da <code>input()</code> immer einen String zurückgibt, muss man ihn explizit mit <code>int()</code> oder <code>float()</code> in eine Zahl umwandeln."
+  },
+  {
+    "id": "mc_15",
+    "type": "multiple_choice",
+    "topic": "Typumwandlung",
+    "difficulty": 1,
+    "question": "Welche Funktion wandelt einen String in einen Integer um?",
+    "options": ["<code>integer()</code>", "<code>int()</code>", "<code>str()</code>", "<code>convert()</code>"],
+    "answer": 1,
+    "explanation": "Die Funktion <code>int()</code> wandelt einen String (oder Float) in einen Integer um."
+  },
+  {
+    "id": "mc_16",
+    "type": "multiple_choice",
+    "topic": "Typumwandlung",
+    "difficulty": 1,
+    "question": "Welche Funktion wandelt eine Zahl in einen String um?",
+    "options": ["<code>string()</code>", "<code>int()</code>", "<code>str()</code>", "<code>text()</code>"],
+    "answer": 2,
+    "explanation": "Die Funktion <code>str()</code> wandelt eine Zahl oder andere Datentypen in einen String um."
+  },
+  {
+    "id": "mc_17",
+    "type": "multiple_choice",
+    "topic": "Typumwandlung",
+    "difficulty": 2,
+    "question": "Was passiert bei <code>int('3.7')</code>?",
+    "options": [
+      "Es gibt 3 zurück",
+      "Es gibt 4 zurück (kaufmännisches Runden)",
+      "Es gibt einen ValueError",
+      "Es gibt 3.7 zurück"
+    ],
+    "answer": 2,
+    "explanation": "<code>int()</code> kann keinen String mit Dezimalpunkt direkt umwandeln. Das ergibt einen <code>ValueError</code>. Zuerst müsste man <code>float('3.7')</code> aufrufen."
+  },
+  {
+    "id": "mc_18",
+    "type": "multiple_choice",
+    "topic": "Typumwandlung",
+    "difficulty": 2,
+    "question": "Was gibt <code>type(3.0)</code> zurück?",
+    "options": [
+      "<code>&lt;class 'int'&gt;</code>",
+      "<code>&lt;class 'float'&gt;</code>",
+      "<code>&lt;class 'string'&gt;</code>",
+      "<code>&lt;class 'number'&gt;</code>"
+    ],
+    "answer": 1,
+    "explanation": "<code>3.0</code> ist eine Fließkommazahl (Float), auch wenn der Nachkommaanteil null ist. <code>type(3.0)</code> gibt daher <code>&lt;class 'float'&gt;</code> zurück."
+  },
+  {
+    "id": "mc_19",
+    "type": "multiple_choice",
+    "topic": "Zuweisungsoperator",
+    "difficulty": 1,
+    "question": "Was bedeutet <code>=</code> in Python?",
+    "options": [
+      "Mathematische Gleichheit",
+      "Vergleich zweier Werte",
+      "Zuweisung eines Wertes an eine Variable",
+      "Definition einer Funktion"
+    ],
+    "answer": 2,
+    "explanation": "In Python ist <code>=</code> der Zuweisungsoperator. Er weist den Wert auf der rechten Seite der Variable auf der linken Seite zu. Für mathematische Gleichheit gibt es <code>==</code>."
+  },
+  {
+    "id": "mc_20",
+    "type": "multiple_choice",
+    "topic": "Zuweisungsoperator",
+    "difficulty": 2,
+    "question": "Was gibt folgender Code aus?\n<code>x = 5\nx = x + 3\nprint(x)</code>",
+    "options": ["5", "3", "8", "Fehlermeldung, weil x = x + 3 keine gültige Gleichung ist"],
+    "answer": 2,
+    "explanation": "Zuerst wird <code>x + 3</code>, also <code>5 + 3 = 8</code>, berechnet. Dann wird dieser Wert <code>x</code> zugewiesen. <code>print(x)</code> gibt daher <code>8</code> aus."
+  },
+  {
+    "id": "op_01",
+    "type": "output_prediction",
+    "topic": "Operatoren",
+    "difficulty": 1,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print(3 + 4)",
+    "options": ["3 + 4", "7", "7.0", "34"],
+    "answer": 1,
+    "explanation": "<code>3 + 4</code> ist eine Integer-Addition. Das Ergebnis ist der Integer <code>7</code>."
+  },
+  {
+    "id": "op_02",
+    "type": "output_prediction",
+    "topic": "Operatoren",
+    "difficulty": 1,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print(10 / 4)",
+    "options": ["2", "2.5", "2,5", "Fehlermeldung"],
+    "answer": 1,
+    "explanation": "Division ergibt in Python immer einen Float. <code>10 / 4 = 2.5</code>."
+  },
+  {
+    "id": "op_03",
+    "type": "output_prediction",
+    "topic": "Operatoren",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print('Hallo' + ' ' + 'Welt')",
+    "options": ["Hallo Welt", "HalloWelt", "Hallo + Welt", "Fehlermeldung"],
+    "answer": 0,
+    "explanation": "Die drei Strings <code>'Hallo'</code>, <code>' '</code> und <code>'Welt'</code> werden mit <code>+</code> verkettet. Das Ergebnis ist <code>Hallo Welt</code>."
+  },
+  {
+    "id": "op_04",
+    "type": "output_prediction",
+    "topic": "Operatoren",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print(2 ** 3)",
+    "options": ["6", "8", "23", "2.3"],
+    "answer": 1,
+    "explanation": "<code>**</code> ist der Potenzierungsoperator. <code>2 ** 3</code> bedeutet $2^3 = 8$."
+  },
+  {
+    "id": "op_05",
+    "type": "output_prediction",
+    "topic": "Datentypen",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print(type(42))",
+    "options": [
+      "42",
+      "int",
+      "<class 'int'>",
+      "<class 'integer'>"
+    ],
+    "answer": 2,
+    "explanation": "Die <code>type()</code>-Funktion gibt den Datentyp als Klassenobjekt zurück. Die Ausgabe lautet <code>&lt;class 'int'&gt;</code>."
+  },
+  {
+    "id": "op_06",
+    "type": "output_prediction",
+    "topic": "Datentypen",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print(type('3.14'))",
+    "options": [
+      "<class 'float'>",
+      "<class 'int'>",
+      "<class 'str'>",
+      "<class 'number'>"
+    ],
+    "answer": 2,
+    "explanation": "<code>'3.14'</code> steht in Anführungszeichen, also ist es ein String, kein Float. Die Ausgabe lautet <code>&lt;class 'str'&gt;</code>."
+  },
+  {
+    "id": "op_07",
+    "type": "output_prediction",
+    "topic": "Typumwandlung",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "x = int(3.9)\nprint(x)",
+    "options": ["3.9", "4", "3", "Fehlermeldung"],
+    "answer": 2,
+    "explanation": "<code>int()</code> schneidet die Nachkommastellen einfach ab (keine Rundung). <code>int(3.9)</code> ergibt daher <code>3</code>, nicht <code>4</code>."
+  },
+  {
+    "id": "op_08",
+    "type": "output_prediction",
+    "topic": "Typumwandlung",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "g = 9.81\nprint('g = ' + str(g) + ' m/s^2')",
+    "options": [
+      "g = 9.81 m/s^2",
+      "Fehlermeldung, weil man Strings und Floats nicht verketten kann",
+      "g = 9.81m/s^2",
+      "g =  9.81  m/s^2"
+    ],
+    "answer": 0,
+    "explanation": "<code>str(g)</code> wandelt den Float <code>9.81</code> in den String <code>'9.81'</code> um. Dann werden die drei Strings verkettet: <code>g = 9.81 m/s^2</code>."
+  },
+  {
+    "id": "op_09",
+    "type": "output_prediction",
+    "topic": "Zuweisungsoperator",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "x = 10\nx = x + 5\nx = x * 2\nx = x - 3\nprint(x)",
+    "options": ["17", "27", "37", "22"],
+    "answer": 1,
+    "explanation": "Schritt für Schritt: <code>x = 10</code>, dann <code>x = 15</code>, dann <code>x = 30</code>, dann <code>x = 27</code>."
+  },
+  {
+    "id": "op_10",
+    "type": "output_prediction",
+    "topic": "Variablen",
+    "difficulty": 1,
+    "question": "Was gibt dieser Code aus?",
+    "code": "laenge = 5\nbreite = 3\nflaeche = laenge * breite\nprint(flaeche)",
+    "options": ["laenge * breite", "15", "8", "53"],
+    "answer": 1,
+    "explanation": "<code>5 * 3 = 15</code>. Die Variable <code>flaeche</code> enthält den Wert <code>15</code>."
+  },
+  {
+    "id": "op_11",
+    "type": "output_prediction",
+    "topic": "Variablen",
+    "difficulty": 3,
+    "question": "Was gibt dieser Code aus?",
+    "code": "x = 3\ny = x\nx = 7\nprint(y)",
+    "options": ["7", "3", "x", "Fehlermeldung"],
+    "answer": 1,
+    "explanation": "Nach <code>y = x</code> hat <code>y</code> den Wert <code>3</code>. Die spätere Änderung von <code>x</code> auf <code>7</code> hat keinen Einfluss auf <code>y</code>. Python kopiert den Wert, nicht die Referenz."
+  },
+  {
+    "id": "op_12",
+    "type": "output_prediction",
+    "topic": "Operatoren",
+    "difficulty": 3,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print(2 + 3 * 4)",
+    "options": ["20", "14", "24", "Fehlermeldung"],
+    "answer": 1,
+    "explanation": "Punkt- vor Strichrechnung gilt auch in Python. Zuerst wird <code>3 * 4 = 12</code> berechnet, dann <code>2 + 12 = 14</code>."
+  },
+  {
+    "id": "op_13",
+    "type": "output_prediction",
+    "topic": "Typumwandlung",
+    "difficulty": 3,
+    "question": "Was gibt dieser Code aus?",
+    "code": "x = float(int('7') + 1)\nprint(type(x))",
+    "options": [
+      "<class 'int'>",
+      "<class 'float'>",
+      "<class 'str'>",
+      "Fehlermeldung"
+    ],
+    "answer": 1,
+    "explanation": "<code>int('7')</code> ergibt <code>7</code>, dann <code>7 + 1 = 8</code>, dann wandelt <code>float(8)</code> das Ergebnis in <code>8.0</code> um. Der Typ ist Float."
+  },
+  {
+    "id": "op_14",
+    "type": "output_prediction",
+    "topic": "print()",
+    "difficulty": 2,
+    "question": "Was gibt dieser Code aus?",
+    "code": "print('Das Ergebnis ist:', 5 * 6)",
+    "options": [
+      "Das Ergebnis ist: 5 * 6",
+      "Das Ergebnis ist:30",
+      "Das Ergebnis ist: 30",
+      "Fehlermeldung"
+    ],
+    "answer": 2,
+    "explanation": "<code>print()</code> mit mehreren Argumenten fügt automatisch ein Leerzeichen zwischen die Argumente ein. Die Ausgabe lautet <code>Das Ergebnis ist: 30</code>."
+  },
+  {
+    "id": "op_15",
+    "type": "output_prediction",
+    "topic": "Operatoren",
+    "difficulty": 3,
+    "question": "Was gibt dieser Code aus?",
+    "code": "mehrwertsteuersatz = 19/100\nnettopreis = 80\nbruttopreis = nettopreis + mehrwertsteuersatz * nettopreis\nprint(bruttopreis)",
+    "options": ["95.2", "99", "95", "99.0"],
+    "answer": 0,
+    "explanation": "<code>19/100 = 0.19</code>, dann <code>0.19 * 80 = 15.2</code>, dann <code>80 + 15.2 = 95.2</code>."
+  }
+]

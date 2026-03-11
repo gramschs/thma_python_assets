@@ -1,47 +1,110 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
+  import './app.css';
+  import Home from './routes/Home.svelte';
+  import Chapter from './routes/Chapter.svelte';
+
+  let view = $state('home');
+  let activeChapter = $state(null);
+
+  function openChapter(chapter) {
+    activeChapter = chapter;
+    view = 'chapter';
+  }
+
+  function goHome() {
+    view = 'home';
+    activeChapter = null;
+  }
 </script>
 
-<main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
+<div class="app">
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">▸</span>
+        <span class="logo-text">Python im Maschinenbau</span>
+      </div>
+      {#if view === 'chapter'}
+        <button class="back-btn" onclick={goHome}>
+          ← Kapitelübersicht
+        </button>
+      {/if}
+    </div>
+  </header>
 
-  <div class="card">
-    <Counter />
-  </div>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
+  <main>
+    {#if view === 'home'}
+      <Home onChapterSelect={openChapter} />
+    {:else}
+      <Chapter chapter={activeChapter} onBack={goHome} />
+    {/if}
+  </main>
+</div>
 
 <style>
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+
+  .logo-mark {
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-family: var(--font-code);
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+
+  .logo-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.01em;
   }
-  .read-the-docs {
-    color: #888;
+
+  .back-btn {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: var(--radius);
+    transition: all 0.15s;
+  }
+
+  .back-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  main {
+    flex: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 40px 24px;
   }
 </style>
