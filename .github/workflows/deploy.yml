@@ -34,6 +34,11 @@ jobs:
         working-directory: quiz
         run: npm run build
 
+      - name: Ordnerstruktur für GitHub Pages erstellen
+        run: |
+          mkdir -p dist/quiz
+          cp -r quiz/dist/* dist/quiz/
+
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v4
         with:
@@ -42,7 +47,7 @@ jobs:
       - name: Build-Ordner hochladen
         uses: actions/upload-pages-artifact@v3
         with:
-          path: quiz/dist
+          path: dist
 
   deploy:
     needs: build
