@@ -1,19 +1,39 @@
 <script>
   import './app.css';
+  import { chapters } from './data/chapters.js';
   import Home from './routes/Home.svelte';
   import Chapter from './routes/Chapter.svelte';
 
   let view = $state('home');
   let activeChapter = $state(null);
 
+  // URL-Parameter beim Start auslesen: ?chapter=02
+  const params = new URLSearchParams(window.location.search);
+  const chapterParam = params.get('chapter');
+  if (chapterParam) {
+    const found = chapters.find(c => String(c.number).padStart(2, '0') === chapterParam);
+    if (found) {
+      activeChapter = found;
+      view = 'chapter';
+    }
+  }
+
   function openChapter(chapter) {
     activeChapter = chapter;
     view = 'chapter';
+    // URL aktualisieren ohne Seitenneuladen
+    const url = new URL(window.location);
+    url.searchParams.set('chapter', String(chapter.number).padStart(2, '0'));
+    window.history.pushState({}, '', url);
   }
 
   function goHome() {
     view = 'home';
     activeChapter = null;
+    // URL-Parameter entfernen
+    const url = new URL(window.location);
+    url.searchParams.delete('chapter');
+    window.history.pushState({}, '', url);
   }
 </script>
 
