@@ -1,10 +1,8 @@
-name: Deploy Quiz to GitHub Pages
+name: Deploy Assets to GitHub Pages
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'quiz/**'
   workflow_dispatch:
 
 permissions:
@@ -39,6 +37,8 @@ jobs:
         run: |
           mkdir -p dist/quiz
           cp -r quiz/dist/* dist/quiz/
+          cp -r datasets/ dist/datasets/
+          cp -r pics/ dist/pics/
 
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v4
