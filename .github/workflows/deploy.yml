@@ -37,8 +37,8 @@ jobs:
         run: |
           mkdir -p dist/quiz
           cp -r quiz/dist/* dist/quiz/
-          cp -r datasets/ dist/datasets/
-          cp -r pics/ dist/pics/
+          [ -d datasets ] && cp -r datasets/ dist/datasets/ || true
+          [ -d pics ] && cp -r pics/ dist/pics/ || true
 
       - name: GitHub Pages konfigurieren
         uses: actions/configure-pages@v4
